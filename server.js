@@ -25,7 +25,7 @@ const Queue = require("bull");
 
 const processQueue = new Queue("process search", process.env.REDIS);
 
-processQueue.process(1, async function (job, done) {
+processQueue.process(5, async function (job, done) {
   Object.keys(masterQueue).forEach((key) => {
     io.emit("queue-att", {
       messageId: masterQueue[key].messageId,

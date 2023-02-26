@@ -1,0 +1,23 @@
+{
+  "name": "botgpt-backend",
+  "version": "1.0.0",
+  "description": "a backend for chat gpt connect to discord bot discord gpt",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "eletroswing",
+  "license": "ISC",
+  "dependencies": {
+    "bull": "^4.10.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "redis": "^4.6.5",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

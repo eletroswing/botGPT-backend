@@ -2,19 +2,10 @@ const { randomUUID } = require("crypto");
 const express = require("express");
 const app = express();
 const http = require("http");
-const { createClient } = require("redis");
 
 require("dotenv").config();
 
 var masterQueue = {}
-
-const client = createClient({
-  url: process.env.REDIS,
-});
-
-client.on("error", (err) => console.log("Redis Client Error", err));
-
-client.connect();
 
 const server = http.createServer(app);
 const { Server } = require("socket.io");
